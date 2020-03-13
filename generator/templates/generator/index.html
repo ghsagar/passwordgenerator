@@ -1,0 +1,44 @@
+{% extends 'generator/basics.html' %}
+{% block content %}
+
+<br>
+<br>
+
+    <div class="container text-center">  
+        <h1 class="alert alert-success" >We generate Password</h1> 
+
+        <form action="password">
+            <select name="lengthselect" id=""  >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+
+                
+                
+            </select>Select length
+                <br>
+                <br>
+                <input type="checkbox" name="number" > Include number
+                <br>
+                
+                <input type="checkbox" name="uppercase" > Include Uppercase
+                <br>
+                <input type="checkbox" name="special" > Special Characters
+                <br>
+                <br>
+                <br>
+                <input type="submit" value="get password" class="btn btn-dark"> 
+
+        </form>
+        <br>
+        <br>
+
+        <a href="{% url 'aboutpage' %}" class="btn btn-info">Take me to About page</a>
+    </div>
+
+{% endblock %}
